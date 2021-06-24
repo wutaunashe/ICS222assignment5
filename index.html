@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+<title></title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+       
+      </tr>
+</table>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bounces</th>
+    
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>45</td>
+    
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>67</td>
+    
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>70</td>
+   
+  </tr>
+</table>
+<button type="button" id="change">Click Me</button>
+<script>
+  
+  let button = document.getElementById("change");
+        
+        button.addEventListener('click', ()=>{
+            var table_data = document.getElementsByTagName("table");
+            let number_of_tables = table_data.length; 
+          
+            let table_index = 0;
+            while(table_index < number_of_tables){
+                let table = table_data[table_index].getElementsByTagName('tr'); 
+                let row_count = 0;
+                for(row_count =0; row_count< table.length; row_count+=2){
+                    table[row_count].style.background = "black";
+                    table[row_count].style.color= "white";
+                }
+              
+                table_index++;
+            }
+
+
+           
+        });
+       
+       
+        
+        
+
+     
+    
+</script>
+  </body>
+</html>
